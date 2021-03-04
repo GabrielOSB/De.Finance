@@ -16,6 +16,7 @@
 
         <main class="container">
             <section id="balance">
+
                 <h2 class="sr-only">Balanço</h2>
 
                 <div class="card">
@@ -47,11 +48,16 @@
                     </h3>
                     <p id="totalDisplay">R$ 0,00</p>
                 </div>
-                
+
             </section>
 
             <section id="transaction">
                 <h2 class="sr-only">Transações</h2>
+
+                <div class="toggle">
+                    <input id="switch" type="checkbox" name="theme"> 
+                    <label for="switch"></label>
+                </div>
 
                 <a href="#" 
                 onclick="Modal.open()"
@@ -129,5 +135,6 @@
         <footer><p>dev.finance$</p></footer>
 
         <script src="./scripts.js"></script>
+        <script src="darkModal.js"></script>
     </body>
 </html>
