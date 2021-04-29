@@ -54,14 +54,19 @@
             <section id="transaction">
                 <h2 class="sr-only">Transações</h2>
 
+                <!-- Botao Dark Mode -->
+
                 <div class="toggle">
+
+                    <a href="#" 
+                    onclick="Modal.open()"
+                    class="button new">+ Nova Transação</a>
+
                     <input id="switch" type="checkbox" name="theme"> 
                     <label for="switch"></label>
                 </div>
 
-                <a href="#" 
-                onclick="Modal.open()"
-                class="button new">+ Nova Transação</a>
+
                 
                 <table id="data-table">
                     <thead>
