@@ -12,13 +12,15 @@ const initialColors = {
     greenHeader: getStyle(html, "--green-header"),
     cardWhite: getStyle(html, "--card-white"),
     colorWhite: getStyle(html, "--color-white"),
+    title: getStyle(html, "--title"),
 }
 
 const darkMode = {
     whiteBackground: "#353535",
     greenHeader: "#434343",
     cardWhite: "#2d2d2d",
-    colorWhite: "#FFF"
+    colorWhite: "#FFF",
+    title: "#FFF",
 }
 
 const transformKey = key => 

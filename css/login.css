@@ -25,8 +25,19 @@ form img{
     height: 200px;
 }
 
+form h1{
+    text-align: center;
+    font-size: 18pt;
+    font-weight: 500;
+
+    color: var(--title);
+
+    margin-bottom: 22px;
+}
+
 form input{
     margin: 0.8rem 0;
+    outline: 0;
 }
 
 .button{
@@ -48,4 +59,18 @@ form input{
 .create:hover{
     color: white;
     border: none;
+}
+
+.link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 32px;
+}
+
+.a{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
 }
