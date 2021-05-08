@@ -85,6 +85,7 @@
 
         <div class="modal-overlay">
             <div class="modal">
+
                 <div id="form">
                     <h2>Nova Transação</h2>
                     <form action="" onsubmit="Form.submit(event)">
@@ -136,6 +137,22 @@
                 </div>
             </div>
         </div>
+
+        <div class="error">
+            <div class="error-modal">
+
+                <img src="https://www.flaticon.com/svg/vstatic/svg/458/458594.svg?token=exp=1620518072~hmac=e890ba1c6e76fb81b2fe6828dd7229ee" alt="">
+
+                <h1>Por Favor, preencha todos os campos</h1>
+
+                <a 
+                onclick="Modal.open(), error.closeError()" 
+                href="#"
+                class="button">Voltar</a>
+
+            </div>
+        </div>
+
 
         <footer><p>© 2021 &nbsp; Dev.Finance</p></footer>
 

@@ -1,18 +1,18 @@
 const html = document.querySelector("html")
 const checkbox = document.querySelector("input[name=theme]")
 
+
 const getStyle = (element, style) => 
     window
         .getComputedStyle(element)
         .getPropertyValue(style)
-
 
 const initialColors = {
     whiteBackground: getStyle(html, "--white-background"),
     greenHeader: getStyle(html, "--green-header"),
     cardWhite: getStyle(html, "--card-white"),
     colorWhite: getStyle(html, "--color-white"),
-    title: getStyle(html, "--title"),
+    cardDark: getStyle(html, "--card-dark"),
 }
 
 const darkMode = {
@@ -20,7 +20,7 @@ const darkMode = {
     greenHeader: "#434343",
     cardWhite: "#2d2d2d",
     colorWhite: "#FFF",
-    title: "#FFF",
+    cardDark: "#2d2d2d"
 }
 
 const transformKey = key => 

@@ -6,13 +6,13 @@
     --dark-header: #191919;
     --light-green: #3dd705;
     --red: #e92929;
-    --title: #575b69;
 
 
     --white-background: #F0F2F5; 
     --green-header: #184e05;
-    --card-white: #f8f8f8;
+    --card-white: #f7f7f7;
     --color-white: #696969;
+    --card-dark: #fff;
 }
 
 * {
@@ -95,7 +95,7 @@ button:hover {
 
 .button.cancel {
     color: var(--red);
-    border: 2px var(--red) solid;
+    border: var(--red) solid;
     border-radius: 0.25rem;
 
     height: 50px;
@@ -105,7 +105,7 @@ button:hover {
     justify-content: center;
 
     opacity: 0.6;
-    transition: all .3s ease-in-out ;
+    transition: all 100ms linear;
 }
 
 .button.cancel:hover {
@@ -134,7 +134,6 @@ input[type=checkbox]{
     height: 0;
     width: 0;
     visibility: hidden;
-    
 }
 
 label {
@@ -224,7 +223,7 @@ label:active:after {
 #data-table {
     width: 100%;
     border-spacing: 0 0.5rem;
-    color: #969cb3;
+    color: var(--color-white);
 }
 
 table thead tr th:first-child, 
@@ -239,7 +238,7 @@ table tbody tr td:last-child{
 }
 
 table thead th {
-    background: white;
+    background: var(--card-dark);
 
     font-weight: normal;
     padding: 1rem 2rem;
@@ -258,13 +257,15 @@ table tbody tr:hover {
 }
 
 table tbody td {
-    background: white;
     padding: 1rem 2rem;
+    
+    background: var(--card-dark)
 }
 
 td.description {
-    color: var(--dark-blue);
+    color: var(--color-white);
 }
+
 
 td.income {
     color: #12a454;
@@ -291,7 +292,7 @@ td.expense {
     opacity: 0;
     visibility: hidden;
 
-    z-index: 999;
+    z-index: 998;
 }
 
 .modal-overlay.active {
@@ -306,7 +307,6 @@ td.expense {
     position: relative;
     z-index: 1;
 }
-
 
 /* Form ===================== */
 #form {
@@ -325,6 +325,9 @@ input {
     padding: 0.8rem;
 
     width: 100%;
+
+    outline: 0;
+    
 }
 
 .input-group {
@@ -332,7 +335,8 @@ input {
 }
 
 .input-group .help{
-    opacity: 0.4;
+    opacity: 0.7;
+    color: var(--color-white);
 }
 
 .input-group.actions {
@@ -346,6 +350,69 @@ input {
     width: 48%;
 }
 
+
+/* Error ====================== */
+
+.error{
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0,0,0,0.7);
+
+    position: fixed;
+    top: 0;
+
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    visibility: hidden;
+
+    z-index: 999;
+    transition: all 200ms linear;
+}
+
+.error.active{
+    opacity: 1;
+    visibility: visible;
+}
+
+.error-modal{
+    background: var(--card-white);
+    padding: 2.2rem 2.4rem;
+    margin-top: -30rem;
+
+    position: relative;
+    z-index: 1;
+}
+
+.error img{
+    display: block;
+    margin: 0 auto;
+
+    width: 100px;
+    height: 100px;
+}
+
+.error h1{
+    margin: 32px 0;
+    color: var(--color-white);
+    text-align: center;
+}
+
+.error a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    color: white;
+
+    padding: 10px 32px;
+
+    background: var(--green);
+}
 
 /* Footer ===================== */
 footer {
